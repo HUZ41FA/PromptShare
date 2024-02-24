@@ -15,7 +15,7 @@ export const POST = async (req, res) => {
 
     return new Response(JSON.stringify(newPrompt), { status: 201 });
   } catch (err) {
-    console.log(err.message);
+    console.log(err);
     return new Response(
       JSON.stringify({ message: "Failed to fetch results ⚠️" }),
       { status: 500 }

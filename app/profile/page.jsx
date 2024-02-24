@@ -14,7 +14,6 @@ const page = () => {
   const fetchPosts = async () => {
     const response = await fetch(`/api/users/${session?.user.id}/posts`);
     if (response.ok) {
-      debugger;
       const data = await response.json();
       setPosts(data);
     } else {
@@ -23,7 +22,6 @@ const page = () => {
   };
 
   useEffect(() => {
-    debugger;
     if (session?.user.id) {
       fetchPosts();
     }
@@ -34,7 +32,6 @@ const page = () => {
   };
 
   const handleDelete = async (post) => {
-    debugger;
     const hasConfirmed = confirm("Are your sure your want to proceed?");
 
     if (hasConfirmed) {

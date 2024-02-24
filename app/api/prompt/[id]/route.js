@@ -55,7 +55,6 @@ export const DELETE = async (req, { params }) => {
     const prompt = await Prompt.findByIdAndDelete(params.id);
 
     if (!prompt) {
-      console.log("⚠️⚠️⚠️ UNABLE TO FIND YOUR POST ⚠️⚠️⚠️");
       return new Response(JSON.stringify({ message: "Prompt not found" }), {
         status: 404,
       });

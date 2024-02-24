@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
 
 const PromptCardList = ({ data, searchText, handleTagClick }) => {
-  debugger;
   data = data.filter(
     (p) =>
       searchText === "" ||
@@ -27,7 +26,6 @@ const PromptCardList = ({ data, searchText, handleTagClick }) => {
 };
 
 const Feed = () => {
-  console.log("Render Feed");
   const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
 
